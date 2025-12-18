@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Магнитогорск - Умный город</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .welcome-section p, .welcome-section ul {
+            font-size: 14px;
+        }
+        .welcome-section li {
+            margin-bottom: 8px;
+        }
+        @media (max-width: 768px) {
+            .welcome-section p, .welcome-section ul {
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="map.html">Карта</a>
+        <a href="analytics.html">Аналитика</a>
+        <a href="user.html">Профиль</a>
+    </nav>
+    
+    <div class="content">
+        <h1>Добро пожаловать в систему умного города Магнитогорска</h1>
+        <div class="welcome-section">
+            <div class="welcome-text">
+                <p>Это цифровая платформа для управления городской инфраструктурой. Здесь вы можете:</p>
+                <ul>
+                    <li>Просматривать карту города в реальном времени</li>
+                    <li>Анализировать статистику по ключевым показателям</li>
+                    <li>Управлять своим профилем и настройками</li>
+                </ul>
+                <div class="stats">
+                    <div class="stat-item">
+                        <h3>500+</h3>
+                        <p>Умных датчиков</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>24/7</h3>
+                        <p>Мониторинг города</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>95%</h3>
+                        <p>Удовлетворенность жителей</p>
+                    </div>
+                </div>
+            </div>
+            <div class="welcome-image">
+                <!-- Здесь можно добавить изображение города -->
+                <div style="width: 100%; height: 250px; background: #f0f0f0; border-radius: 10px; display: flex; align-items: center; justify-content: center; color: #666;">
+                    Изображение города
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

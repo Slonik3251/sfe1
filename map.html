@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Карта Магнитогорска</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #map-container {
+            position: relative;
+            height: 100vh;
+            width: 100%;
+        }
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+        .map-controls {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: white;
+            padding: 10px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        }
+        body.dark-theme .map-controls {
+            background: #333;
+            color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="analytics.html">Аналитика</a>
+        <a href="user.html">Профиль</a>
+    </nav>
+
+    <div id="map-container">
+        <div id="map"></div>
+        <div class="map-controls">
+            <button id="zoom-in" style="padding: 5px 10px; margin: 2px;">+</button>
+            <button id="zoom-out" style="padding: 5px 10px; margin: 2px;">-</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Инициализация карты с центром в Магнитогорске
+        const map = L.map('map').setView([53.41861, 59.04722], 13);
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        
+        // Управление масштабом
+        document.getElementById('zoom-in').addEventListener('click', () => map.zoomIn());
+        document.getElementById('zoom-out').addEventListener('click', () => map.zoomOut());
+    </script>
+</body>
+</html>

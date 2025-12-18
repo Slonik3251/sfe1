@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .profile-container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            font-size: 14px;
+        }
+        body.dark-theme .profile-container {
+            background: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 13px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 13px;
+        }
+        body.dark-theme input {
+            background: #444;
+            color: #f0f0f0;
+            border-color: #666;
+        }
+        button {
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        body.dark-theme button {
+            background: #4CAF50;
+            color: #000;
+        }
+        button:hover {
+            background: #2980b9;
+        }
+        body.dark-theme button:hover {
+            background: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <nav class="main-nav">
+        <a href="index.html">Главная</a>
+        <a href="map.html">Карта</a>
+        <a href="analytics.html">Аналитика</a>
+    </nav>
+
+    <div class="content">
+        <div class="profile-container">
+            <h1 style="font-size: 18px;">Профиль пользователя</h1>
+            <form id="profileForm">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" value="Иван Иванов">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" value="ivan@example.com">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="tel" id="phone" value="+7 900 123-45-67">
+                </div>
+                <button type="submit">Сохранить изменения</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.getElementById('profileForm').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Изменения сохранены!');
+        });
+    </script>
+</body>
+</html>
