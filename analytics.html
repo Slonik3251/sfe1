@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аналитика</title>
+    <title>Аналитика городских данных Магнитогорска: трафик, потребление энергии, статистика</title>
+    <meta name="description" content="Детальная аналитика и визуализация ключевых показателей Магнитогорска. Интерактивные графики трафика, тепловая карта энергопотребления и отчеты в реальном времени.">
     <link rel="stylesheet" href="style.css">
     <style>
         #heatmap {
@@ -92,7 +93,7 @@
         <div class="dashboard">
             <div class="chart-container">
                 <h2>Интенсивность трафика</h2>
-                <canvas id="trafficChart"></canvas>
+                <canvas id="trafficChart" aria-label="Линейный график интенсивности трафика по дням недели. Пиковые значения наблюдаются в среду и четверг."></canvas>
             </div>
             <div class="chart-container">
                 <h2>Тепловая карта<span class="help-icon" title="Цвет показывает уровень потребления: зеленый - низкий, желтый - средний, красный - высокий">?</span></h2>
